@@ -2,7 +2,7 @@ import os
 import subprocess
 from bs4 import BeautifulSoup
 
-APP_ICONS_PATH = "/Users/dan/web_development/Twinny/twinny-app/src/app/shared/ui/icons"
+APP_ICONS_PATH = "/Users/dan/Documents/Twinny front/twinny-app/src/app/shared/ui/icons"
 
 
 def get_path_input(has_tried):
