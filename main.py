@@ -1,8 +1,10 @@
 import os
 import subprocess
+from dotenv import load_dotenv
 from bs4 import BeautifulSoup
 
-APP_ICONS_PATH = "/Users/dan/web_development/Twinny/twinny-app/src/app/shared/ui/icons"
+load_dotenv()
+APP_ICONS_PATH = os.getenv("ICONS_PATH")
 
 
 def get_path_input(has_tried):
