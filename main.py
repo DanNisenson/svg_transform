@@ -54,13 +54,14 @@ def modify_svg_elements(soup):
 
         for child in svg.children:
             if child.name == "path":
-                svg["stroke"] = "currentColor"
-                svg["fill"] = "none"
-                del child["fill"]
-                del child["stroke"]
-            else:
-                svg["fill"] = "currentColor"
-                svg["stroke"] = "none"
+                if child["stroke"]:
+                    svg["stroke"] = "currentColor"
+                    svg["fill"] = "none"
+                    del child["fill"]
+                    del child["stroke"]
+                else:
+                    svg["fill"] = "currentColor"
+                    svg["stroke"] = "none"
 
 
 def save_modified_html(soup, component_name, icons_folder):
