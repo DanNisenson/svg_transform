@@ -1,3 +1,5 @@
 /venv/bin
 /venv/lib
 /venv/include
+
+.env
