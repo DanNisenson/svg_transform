@@ -54,7 +54,7 @@ def modify_svg_elements(soup):
 
         for child in svg.children:
             if child.name == "path":
-                if child["stroke"]:
+                if hasattr(child, "stroke"):
                     svg["stroke"] = "currentColor"
                     svg["fill"] = "none"
                     del child["fill"]
